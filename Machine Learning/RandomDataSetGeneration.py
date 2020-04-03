@@ -5,7 +5,7 @@ def generator(list):
     return random_val
 
 # Function to generate the random data
-def generateRandomData(range):
+def generateRandomData(num):
     dict = {
         'Gender': ['F', 'M'],
         'Class': [3,4,5],
@@ -14,8 +14,8 @@ def generateRandomData(range):
         'Results_After': ['P', 'F'],
     }
 # Creating CSV file
-    with open('random_dataset.csv', 'a', newline='') as csv_file:
-        for i in range(range):
+    with open('random_dataset1.csv', 'a', newline='') as csv_file:
+        for i in range(num):
             Age = generator(dict['Age'])
             Gender = generator(dict['Gender'])
             Results_Before = generator(dict['Results_Before'])
@@ -29,4 +29,4 @@ def generateRandomData(range):
 
 
 if __name__ == '__main__':
-    generateRandomData(5000)
+    generateRandomData(1000000)
